@@ -73,9 +73,15 @@ class   MotoController
 
         // Lana: j'essaie de recup l'id pour le modifié
 
+        $motos = $this->motoManager->findById($id);
+
+        if ($motos===false) {
+            header("Location: http://localhost:8888/php-procedural/LanaKarmaouiPOO/index.php/moto");
+        }
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST['brand']) && isset($_POST['model']) && isset($_POST['type']) && isset($_POST['price']) && isset($_POST['image'])) {
-                $motos = $this->motoManager->findById($id);
+
                 $motos->setBrand($_POST['brand']);
                 $motos->setModel($_POST['model']);
                 $motos->setType($_POST['type']);
