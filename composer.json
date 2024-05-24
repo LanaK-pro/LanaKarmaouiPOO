@@ -1,0 +1,16 @@
+{
+    "name": "gaeta/pizzapoo",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "GaetanThomas42",
+            "email": "gaetanthomasdev@gmail.com"
+        }
+    ],
+    "require": {}
+}
